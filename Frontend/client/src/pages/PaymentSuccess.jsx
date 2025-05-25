@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { courses, enrollInCourse } from './CourseData';
+import { courses, enrollInCourse } from './courseData';
 
 const PaymentSuccess = () => {
   const query = new URLSearchParams(useLocation().search);
