@@ -14,8 +14,7 @@ const PORT = process.env.PORT || 5000;
 
 // Enhanced CORS Configuration
 const corsOptions = {
-  origin: ['http://localhost:5173', 'http://localhost:3000', 'http://localhost:4173'], // Frontend URLs for start locally
-  // origin: ['https://ourstudentportal.netlify.app/'], // Frontend URLs
+  origin: ['http://localhost:5173', process.env.REACT_APP_SERVER_URL], // Frontend URLs for start locally
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: [
     'Content-Type', 
