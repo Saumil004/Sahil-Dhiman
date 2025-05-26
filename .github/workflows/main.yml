@@ -21,7 +21,7 @@ jobs:
           ATTEMPT=1
 
           while [ $ATTEMPT -le $MAX_RETRIES ]; do
-            STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://sahil-dhiman.onrender.com/)
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://sahil-dhiman.onrender.com/api/health)
             echo "Attempt $ATTEMPT: Response Code: $STATUS"
 
             if [ "$STATUS" -eq 200 ]; then
